@@ -26,8 +26,6 @@ You will find all the required assets in the `/images` folder. The assets are al
 There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
 
 
-
-
 Feel free to contribute.
 
 **Thanks For Viewing!** 🚀
