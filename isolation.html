@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #161616;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .question__and__answer {
+            border-bottom: 2px solid #fff;
+            width: 500px;
+            padding-bottom: 1rem;
+            cursor: pointer;
+        }
+
+        .question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .question p {
+            font-size: 2rem;
+        }
+
+        .arrow {
+            transition: .7s ease-in-out;
+        }
+
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1s ease-in-out;
+        }
+
+        .answer p {
+            padding-top: 1rem;
+            line-height: 1.5;
+        }
+
+
+        .active {
+            max-height: 300px;
+        }
+
+        .arrow-up {
+            transform: rotate(180deg);
+            transition: ease-in-out 1s;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="question__and__answer">
+        <div class="question">
+          <p>How do I reset my password?</p>
+          <img src="./images/icon-arrow-down.svg" alt="" class="arrow" />
+        </div>
+
+        <div class="answer">
+          <p>
+            Click “Forgot password” from the login page or “Change
+            password” from your profile page. A reset link will be emailed
+            to you.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- javascript -->
+
+    <script>
+        const question = document.querySelector('.question');
+        const arrow = document.querySelector('.arrow');
+        const answer = document.querySelector('.answer');
+
+        question.addEventListener('click', () => {
+            answer.classList.toggle('active');
+            arrow.classList.toggle('arrow-up')
+        })
+    </script>
+</body>
+</html>

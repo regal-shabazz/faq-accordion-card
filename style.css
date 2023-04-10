@@ -78,21 +78,46 @@ section h1 {
 }
 
 section .question__and__answer {
-    overflow: hidden;
+    /* overflow: hidden; */
     border-bottom: 2px solid hsl(240, 5%, 91%);
     padding-bottom: 1rem;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 .question__and__answer .question {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: ease-in-out .5s;
+}
+
+.arrow {
+    transition: .7s ease-in-out;
 }
 
 .question__and__answer .answer {
-    display: none;
+    max-height: 0;
+    transition: max-height 1s ease-in-out;
+    overflow: hidden;
+}
+
+.answer p {
     padding-top: 1rem;
+    line-height: 1.5;
+}
+
+.answer.active {
+    max-height: 300px;
+}
+
+.arrow-up {
+    transform: rotate(180deg);
+    transition: ease-in-out 1s;
+}
+
+.question.active2 {
+    font-weight: 700;
 }
 
 /*  */
